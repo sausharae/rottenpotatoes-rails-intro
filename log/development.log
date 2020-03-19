@@ -1,0 +1,965 @@
+  [1m[36m (16.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (20.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20150809022253)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ubuntu/environment/rottenpotatoes-rails-intro/db/migrate/20150809022253_create_movies.rb:10)
+  [1m[35m (0.2ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150809022253"]]
+  [1m[35m (13.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.652182"], ["updated_at", "2020-01-03 07:09:54.652182"]]
+  [1m[35m (11.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.665834"], ["updated_at", "2020-01-03 07:09:54.665834"]]
+  [1m[36m (11.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.678673"], ["updated_at", "2020-01-03 07:09:54.678673"]]
+  [1m[35m (13.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.693413"], ["updated_at", "2020-01-03 07:09:54.693413"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.706591"], ["updated_at", "2020-01-03 07:09:54.706591"]]
+  [1m[35m (11.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.719370"], ["updated_at", "2020-01-03 07:09:54.719370"]]
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.732189"], ["updated_at", "2020-01-03 07:09:54.732189"]]
+  [1m[35m (15.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.749003"], ["updated_at", "2020-01-03 07:09:54.749003"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.762110"], ["updated_at", "2020-01-03 07:09:54.762110"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2020-01-03 07:09:54.775615"], ["updated_at", "2020-01-03 07:09:54.775615"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 42.61.24.14 at 2020-01-03 07:48:56 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (31.1ms)
+Completed 200 OK in 362ms (Views: 355.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 42.61.24.14 at 2020-01-03 07:48:57 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 42.61.24.14 at 2020-01-03 07:48:57 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 42.61.24.14 at 2020-01-03 07:48:57 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 42.61.24.14 at 2020-01-03 07:48:57 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 42.61.24.14 at 2020-01-03 07:48:57 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 42.61.24.14 at 2020-01-03 07:49:22 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 42.61.24.14 at 2020-01-03 08:32:17 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (3.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 212ms (Views: 201.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.self-28ea1de169ba596f5f3628400e558cc09e47eda6cb6ae233e47f208f7a2578a8.css?body=1" for 42.61.24.14 at 2020-01-03 08:32:17 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 42.61.24.14 at 2020-01-03 08:32:52 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (20.1ms)
+Completed 200 OK in 209ms (Views: 202.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-246de4cdca6e4b74da2c26f91140c4f4da763dc03675f319fd7ab2d76256de9d.css?body=1" for 42.61.24.14 at 2020-01-03 08:32:53 +0000
+Cannot render console from 42.61.24.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:12:49 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x000055d9af4aa518>):
+  app/controllers/movies_controller.rb:22:in `index'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:12:52 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x000055d9af4aa518>):
+  app/controllers/movies_controller.rb:22:in `index'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:14:03 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_rating' for #<Class:0x00007f15c4960740>):
+  app/controllers/movies_controller.rb:22:in `index'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.1ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:14:08 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x00007f15c4802d58>):
+  app/controllers/movies_controller.rb:22:in `index'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.3ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:15:28 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x00007f15c4802d58>):
+  app/controllers/movies_controller.rb:22:in `index'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:17:34 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x000055d9af1e8118>):
+  app/controllers/movies_controller.rb:22:in `index'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:22:33 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x00007f15c4bb0770>):
+  app/controllers/movies_controller.rb:22:in `index'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:33:03 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 319ms (Views: 312.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:33:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/default.self-6f9b50b1298248f9ffdfe129ec4b3e377026ffe33aae3e37ecbf3da21d69be77.css?body=1" for 66.76.61.18 at 2020-03-19 20:33:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-8ab0536a3d216372659fd73f8b75f6a8772662f0adfac96c75157cfff59247d0.css?body=1" for 66.76.61.18 at 2020-03-19 20:33:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 66.76.61.18 at 2020-03-19 20:33:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 66.76.61.18 at 2020-03-19 20:33:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 66.76.61.18 at 2020-03-19 20:33:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 66.76.61.18 at 2020-03-19 20:33:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:34:04 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:34:05 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:34:07 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:34:07 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:34:08 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:36:36 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:36:39 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:37:19 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:37:21 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:40:29 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:40:31 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:43:03 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:43:47 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:43:56 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:44:15 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 177ms (Views: 169.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:44:18 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:44:20 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:44:21 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:49:02 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:7: syntax error, unexpected ',', expecting ')'
+...e" if params[:sort] == "title", id => "title_header"))).to_s...
+...                              ^):
+  app/views/movies/index.html.haml:7: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:50:22 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:50:26 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:50:27 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:51:04 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:51:10 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:51:12 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:51:21 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:51:58 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:00 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:03 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:04 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:45 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:47 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:48 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:48 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:48 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:52:49 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:56:36 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:56:38 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:56:41 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 20:59:16 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:59:18 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 20:59:20 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:01:05 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 28ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:01:51 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 203ms (Views: 194.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:01:53 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:03:21 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:03:23 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies.true" for 66.76.61.18 at 2020-03-19 21:03:25 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?format=false" for 66.76.61.18 at 2020-03-19 21:03:28 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:04:51 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.haml within layouts/application (26.7ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (no implicit conversion of nil into String):
+    4: %table#movies.table.table-striped.col-md-12
+    5:   %thead
+    6:     %tr
+    7:       %th{:class => ("hilite" if @sort == "title")}= link_to "Movie Title", movies_path(@sort => "title"), :id => "title_header"
+    8:       %th Rating
+    9:       %th Release Date
+   10:       %th More Info
+  app/views/movies/index.html.haml:7:in `_app_views_movies_index_html_haml__1665937540239889026_70120150278320'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:05:13 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?format=false" for 66.76.61.18 at 2020-03-19 21:05:15 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?format=false" for 66.76.61.18 at 2020-03-19 21:05:18 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?format=false" for 66.76.61.18 at 2020-03-19 21:05:20 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:05:42 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?format=false" for 66.76.61.18 at 2020-03-19 21:05:45 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:05:46 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:06:50 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:06:52 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 66.76.61.18 at 2020-03-19 21:06:56 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:06:57 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:06:59 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:14:16 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:14:19 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:19:35 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:19:36 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:19:40 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:19:44 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:19:45 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:23:56 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:23:59 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=rating" for 66.76.61.18 at 2020-03-19 21:24:02 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"rating"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY rating[0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=rating" for 66.76.61.18 at 2020-03-19 21:24:10 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"rating"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY rating
+  Rendered movies/index.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:24:13 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=rating" for 66.76.61.18 at 2020-03-19 21:24:14 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"rating"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY rating
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:24:16 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=rating" for 66.76.61.18 at 2020-03-19 21:24:17 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"rating"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY rating
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-19 21:28:01 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=rating" for 66.76.61.18 at 2020-03-19 21:28:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"rating"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY rating
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=release_date" for 66.76.61.18 at 2020-03-19 21:28:08 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:31:13 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=release_date" for 66.76.61.18 at 2020-03-19 21:31:15 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-19 21:31:17 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
