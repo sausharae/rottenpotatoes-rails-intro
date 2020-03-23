@@ -25,7 +25,6 @@ class MoviesController < ApplicationController
       @ratings = @all_ratings
     end
     
-    
       @movies = Movie.where(:rating => @ratings).order(@sort)
   
   end
