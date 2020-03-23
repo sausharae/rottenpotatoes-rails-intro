@@ -4118,3 +4118,522 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date[0m
   Rendered movies/index.html.haml within layouts/application (3.0ms)
 Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-23 21:18:30 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  Rendered movies/index.html.haml within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:8: syntax error, unexpected backslash, expecting ')'
+....to_s);; _hamlout.buffer << ("\n".freeze);; end;; _hamlout.b...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...efresh', :id => "ratings_submit"
+...                 ^~~~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected backslash, expecting ')'
+....to_s);; _hamlout.buffer << ("\n".freeze);; end;; _hamlout.b...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected class, expecting do or '{' or '('
+...amlout.buffer << ("<table class='table table-striped col-md-...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ble table-striped col-md-12' id='movies'>\n<thead>\n<tr>\n<t...
+...                             ^~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+...triped col-md-12' id='movies'>\n<thead>\n<tr>\n<th".freeze);...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+...l-md-12' id='movies'>\n<thead>\n<tr>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+...2' id='movies'>\n<thead>\n<tr>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+...='movies'>\n<thead>\n<tr>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...attribute_compiler1 = (("hilite" if @sort == "title")); case...
+...                         ^~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...= (("hilite" if @sort == "title")); case (_haml_attribute_co...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected class, expecting ')'
+... ((_hamlout.attributes({ "class".freeze => _haml_attribute_c...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected class, expecting '.' or &. or :: or '['
+...se; _hamlout.buffer << (" class='".freeze);; _hamlout.buffer...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tCONSTANT, expecting ')'
+...rs.html_escape(((link_to "Movie Title", movies_path(:sort =>...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e", movies_path(:sort => "title"), :id => "title_header"
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "title"), :id => "title_header"
+...                   ^~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:14: unknown regexp options - th
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:14: syntax error, unexpected backslash
+...er << ("</th>\n<th>Rating</th>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:14: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+... ("</th>\n<th>Rating</th>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...attribute_compiler2 = (("hilite" if @sort == "release_date" ...
+...                         ^~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...lite" if @sort == "release_date" )); case (_haml_attribute_c...
+...                   ^~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected class, expecting ')'
+... ((_hamlout.attributes({ "class".freeze => _haml_attribute_c...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected class, expecting '.' or &. or :: or '['
+...se; _hamlout.buffer << (" class='".freeze);; _hamlout.buffer...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tCONSTANT, expecting ')'
+....html_escape(((link_to "Release Date", movies_path(:sort => ...
+...                        ^~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ies_path(:sort => "release_date"), :id => "release_date_head...
+...                   ^~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+..."), :id => "release_date_header"
+...            ^~~~~~~~~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: unknown regexp options - th
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+...<< ("</th>\n<th>More Info</th>\n</tr>\n</thead>\n<tbody>\n"....
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: unknown regexp options - thad
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+...ore Info</th>\n</tr>\n</thead>\n<tbody>\n".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+.../th>\n</tr>\n</thead>\n<tbody>\n".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:19: syntax error, unexpected backslash
+; _hamlout.buffer << ("<tr>\n<td>".freeze);; 
+                           ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:22: unknown regexp options - td
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:22: unmatched close parenthesis: /td>\n<td>".freeze);; _hamlout.buffer << ((::Haml::Helpers.html_escape(((movie.rating
+)).to_s);).to_s);; _hamlout.buffer << ("</
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:22: syntax error, unexpected backslash
+...);; _hamlout.buffer << ("</td>\n<td>".freeze);; _hamlout.buf...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: unknown regexp options - td
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+...);; _hamlout.buffer << ("</td>\n</tr>\n".freeze);; end;; _ha...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: unknown regexp options - tbdy
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: unmatched close parenthesis: /tr>\n".freeze);; end;; _hamlout.buffer << ("</
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+... _hamlout.buffer << ("</tbody>\n</table>\n".freeze);; _hamlo...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:29: unterminated regexp meets end of file
+          end
+              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:29: unmatched close parenthesis: /table>\n".freeze);; _hamlout.buffer << ((
+::Haml::Helpers.html_escape((( link_to 'Add new movie', new_movie_path
+)).to_s);).to_s);; _hamlout.buffer << ("\n".freeze);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+/m
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:29: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/movies/index.html.haml:8: syntax error, unexpected backslash, expecting ')'
+  app/views/movies/index.html.haml:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:9: syntax error, unexpected backslash, expecting ')'
+  app/views/movies/index.html.haml:9: syntax error, unexpected class, expecting do or '{' or '('
+  app/views/movies/index.html.haml:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+  app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected class, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected class, expecting '.' or &. or :: or '['
+  app/views/movies/index.html.haml:13: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:14: unknown regexp options - th
+  app/views/movies/index.html.haml:14: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:14: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+  app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected class, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected class, expecting '.' or &. or :: or '['
+  app/views/movies/index.html.haml:15: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:16: unknown regexp options - th
+  app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:16: unknown regexp options - thad
+  app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:19: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:22: unknown regexp options - td
+  app/views/movies/index.html.haml:22: unmatched close parenthesis: /td>\n<td>".freeze);; _hamlout.buffer << ((::Haml::Helpers.html_escape(((movie.rating
+  app/views/movies/index.html.haml:22: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:24: unknown regexp options - td
+  app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:24: unknown regexp options - tbdy
+  app/views/movies/index.html.haml:24: unmatched close parenthesis: /tr>\n".freeze);; end;; _hamlout.buffer << ("</
+  app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:29: unterminated regexp meets end of file
+  app/views/movies/index.html.haml:29: unmatched close parenthesis: /table>\n".freeze);; _hamlout.buffer << ((
+  app/views/movies/index.html.haml:29: syntax error, unexpected end-of-input, expecting ')'
+
+
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-23 21:18:36 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:8: syntax error, unexpected backslash, expecting ')'
+....to_s);; _hamlout.buffer << ("\n".freeze);; end;; _hamlout.b...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...efresh', :id => "ratings_submit"
+...                 ^~~~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected backslash, expecting ')'
+....to_s);; _hamlout.buffer << ("\n".freeze);; end;; _hamlout.b...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected class, expecting do or '{' or '('
+...amlout.buffer << ("<table class='table table-striped col-md-...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ble table-striped col-md-12' id='movies'>\n<thead>\n<tr>\n<t...
+...                             ^~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+...triped col-md-12' id='movies'>\n<thead>\n<tr>\n<th".freeze);...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+...l-md-12' id='movies'>\n<thead>\n<tr>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+...2' id='movies'>\n<thead>\n<tr>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+...='movies'>\n<thead>\n<tr>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...attribute_compiler1 = (("hilite" if @sort == "title")); case...
+...                         ^~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...= (("hilite" if @sort == "title")); case (_haml_attribute_co...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected class, expecting ')'
+... ((_hamlout.attributes({ "class".freeze => _haml_attribute_c...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected class, expecting '.' or &. or :: or '['
+...se; _hamlout.buffer << (" class='".freeze);; _hamlout.buffer...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tCONSTANT, expecting ')'
+...rs.html_escape(((link_to "Movie Title", movies_path(:sort =>...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e", movies_path(:sort => "title"), :id => "title_header"
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "title"), :id => "title_header"
+...                   ^~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:14: unknown regexp options - th
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:14: syntax error, unexpected backslash
+...er << ("</th>\n<th>Rating</th>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:14: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+... ("</th>\n<th>Rating</th>\n<th".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...attribute_compiler2 = (("hilite" if @sort == "release_date" ...
+...                         ^~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...lite" if @sort == "release_date" )); case (_haml_attribute_c...
+...                   ^~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected class, expecting ')'
+... ((_hamlout.attributes({ "class".freeze => _haml_attribute_c...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected class, expecting '.' or &. or :: or '['
+...se; _hamlout.buffer << (" class='".freeze);; _hamlout.buffer...
+...                          ^~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tCONSTANT, expecting ')'
+....html_escape(((link_to "Release Date", movies_path(:sort => ...
+...                        ^~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ies_path(:sort => "release_date"), :id => "release_date_head...
+...                   ^~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+..."), :id => "release_date_header"
+...            ^~~~~~~~~~~~~~~~~~~
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: unknown regexp options - th
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+...<< ("</th>\n<th>More Info</th>\n</tr>\n</thead>\n<tbody>\n"....
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: unknown regexp options - thad
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+...ore Info</th>\n</tr>\n</thead>\n<tbody>\n".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+.../th>\n</tr>\n</thead>\n<tbody>\n".freeze);; 
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:19: syntax error, unexpected backslash
+; _hamlout.buffer << ("<tr>\n<td>".freeze);; 
+                           ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:22: unknown regexp options - td
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:22: unmatched close parenthesis: /td>\n<td>".freeze);; _hamlout.buffer << ((::Haml::Helpers.html_escape(((movie.rating
+)).to_s);).to_s);; _hamlout.buffer << ("</
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:22: syntax error, unexpected backslash
+...);; _hamlout.buffer << ("</td>\n<td>".freeze);; _hamlout.buf...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: unknown regexp options - td
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+...);; _hamlout.buffer << ("</td>\n</tr>\n".freeze);; end;; _ha...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: unknown regexp options - tbdy
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: unmatched close parenthesis: /tr>\n".freeze);; end;; _hamlout.buffer << ("</
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+... _hamlout.buffer << ("</tbody>\n</table>\n".freeze);; _hamlo...
+...                              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:29: unterminated regexp meets end of file
+          end
+              ^
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:29: unmatched close parenthesis: /table>\n".freeze);; _hamlout.buffer << ((
+::Haml::Helpers.html_escape((( link_to 'Add new movie', new_movie_path
+)).to_s);).to_s);; _hamlout.buffer << ("\n".freeze);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+/m
+/home/ubuntu/environment/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:29: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/movies/index.html.haml:8: syntax error, unexpected backslash, expecting ')'
+  app/views/movies/index.html.haml:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:9: syntax error, unexpected backslash, expecting ')'
+  app/views/movies/index.html.haml:9: syntax error, unexpected class, expecting do or '{' or '('
+  app/views/movies/index.html.haml:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:9: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+  app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected class, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected class, expecting '.' or &. or :: or '['
+  app/views/movies/index.html.haml:13: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:14: unknown regexp options - th
+  app/views/movies/index.html.haml:14: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:14: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+  app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected class, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected class, expecting '.' or &. or :: or '['
+  app/views/movies/index.html.haml:15: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/index.html.haml:16: unknown regexp options - th
+  app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:16: unknown regexp options - thad
+  app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:16: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:19: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:22: unknown regexp options - td
+  app/views/movies/index.html.haml:22: unmatched close parenthesis: /td>\n<td>".freeze);; _hamlout.buffer << ((::Haml::Helpers.html_escape(((movie.rating
+  app/views/movies/index.html.haml:22: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:24: unknown regexp options - td
+  app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:24: unknown regexp options - tbdy
+  app/views/movies/index.html.haml:24: unmatched close parenthesis: /tr>\n".freeze);; end;; _hamlout.buffer << ("</
+  app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:29: unterminated regexp meets end of file
+  app/views/movies/index.html.haml:29: unmatched close parenthesis: /table>\n".freeze);; _hamlout.buffer << ((
+  app/views/movies/index.html.haml:29: syntax error, unexpected end-of-input, expecting ')'
+
+
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-23 21:18:48 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (17.6ms)
+Completed 200 OK in 180ms (Views: 177.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 66.76.61.18 at 2020-03-23 21:18:49 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 66.76.61.18 at 2020-03-23 21:18:52 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&commit=Refresh" for 66.76.61.18 at 2020-03-23 21:18:53 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for 66.76.61.18 at 2020-03-23 21:18:56 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-23 21:18:58 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 66.76.61.18 at 2020-03-23 21:19:01 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 66.76.61.18 at 2020-03-23 21:19:03 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 66.76.61.18 at 2020-03-23 21:19:04 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 66.76.61.18 at 2020-03-23 21:19:06 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 66.76.61.18 at 2020-03-23 21:19:10 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-23 21:19:14 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-23 21:19:14 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=release_date" for 66.76.61.18 at 2020-03-23 21:19:17 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?sort=release_date" for 66.76.61.18 at 2020-03-23 21:19:19 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for 66.76.61.18 at 2020-03-23 21:19:20 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-23 21:19:21 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for 66.76.61.18 at 2020-03-23 21:19:22 +0000
+Cannot render console from 66.76.61.18! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"  ORDER BY "movies"."rating" ASC
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.3ms)
